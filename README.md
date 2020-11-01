@@ -24,6 +24,8 @@ Move to the folder with all your cs tutorials. Assuming that they are all named 
 To create new cs tutorials, you have to run the `newcs.sh` script. *Windows users* should just use `python main.py` directly. It is also possible to add your own terminal command. **Example for ubuntu users:** create an alias `alias gettut='~/my_scripts/cs_download/newcs.sh'` and just run `gettut` in any folder
   - **Ubuntu users:** A detailed instruction on how to add bash scripts to your ubuntu command list can be found [here](https://askubuntu.com/questions/229589/how-to-make-a-file-e-g-a-sh-script-executable-so-it-can-be-run-from-a-termi)
   - **Windows users:** If you wish to set a permanent DOSKEY/alias for the script see [here](https://superuser.com/questions/1134368/create-permanent-doskey-in-windows-cmd).
+
+For second year  bachelor users, run the script `newcs201.sh` instead, in order to download (and unzip) tutorials for CSE201. More suport for other courses coming soon. Second year content support by [@guruprerana](https://github.com/guruprerana).
   
 Note that you can always see the full argument list by running `python main.py --help`
  
