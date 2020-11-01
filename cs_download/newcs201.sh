@@ -1,0 +1,1 @@
+python ~/my_scripts/cs_download/main.py -c 201

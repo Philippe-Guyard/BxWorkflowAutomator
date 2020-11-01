@@ -11,6 +11,9 @@ from tqdm import tqdm
 
 from bs4 import BeautifulSoup
 
+import io
+from zipfile import ZipFile
+
 
 def get_main_code(link, out_folder=''):
     req = requests.get(link)
@@ -37,4 +40,27 @@ def get_main_code(link, out_folder=''):
     print(f'Extracting fragments of {file_name}')
     with open(os.path.join(out_folder, file_name), 'w') as out_file:
         out_file.write(all_text)
+
+def get_main_code_201(link, out_folder=''):
+    r = requests.get(link)
+    soup = BeautifulSoup(r.text, 'html.parser')
+
+    right_link_to_zip = ''
+    for l in soup.find_all('a'):
+        href = l.get('href')
+        if href.endswith('.zip'):
+            right_link_to_zip = href
+
+    if len(right_link_to_zip) == 0:
+        print(f'Whoops, unable to find tutorial at the link: {link}')
+        exit(0)
+
+    right_link_to_zip = link + right_link_to_zip[2:]
+
+    f = requests.get(right_link_to_zip)
+    zipf = io.BytesIO(f.content)
+
+    with ZipFile(zipf, 'r') as zipf_out:
+        zipf_out.extractall(path=os.path.join(os.getcwd(), out_folder))
+
     
