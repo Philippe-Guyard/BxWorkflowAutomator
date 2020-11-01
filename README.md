@@ -25,7 +25,7 @@ To create new cs tutorials, you have to run the `newcs.sh` script. *Windows user
   - **Ubuntu users:** A detailed instruction on how to add bash scripts to your ubuntu command list can be found [here](https://askubuntu.com/questions/229589/how-to-make-a-file-e-g-a-sh-script-executable-so-it-can-be-run-from-a-termi)
   - **Windows users:** If you wish to set a permanent DOSKEY/alias for the script see [here](https://superuser.com/questions/1134368/create-permanent-doskey-in-windows-cmd).
 
-For second year  bachelor users, run the script `newcs201.sh` instead, to download (and unzips) tutorials for CSE201. More suport for other courses coming soon. Second year content support by [@guruprerana](https://github.com/guruprerana).
+For second year  bachelor users, run the script `newcs201.sh` instead, in order to download (and unzip) tutorials for CSE201. More suport for other courses coming soon. Second year content support by [@guruprerana](https://github.com/guruprerana).
   
 Note that you can always see the full argument list by running `python main.py --help`
  
